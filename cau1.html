@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let inputNum;
+    let num;
+    let tongSoChan = 0;
+    let tongSoLe = 0;
+
+    do{
+        inputNum = +prompt("nhập vào độ dài mảng");
+    }
+    while(inputNum>20){
+        // inputNum = +prompt("nhập vào độ dài mảng");
+    }
+
+
+    for(let i = 0 ; i<inputNum ; i++) {
+        num = +prompt("Nhập phần tử thứ " + i +"vào mảng");
+        arr.push(num);
+    }
+    document.write(arr+"<br>");
+    for(let i = 0 ; i<arr.length ; i++) {
+        if(arr[i]%2==0) {
+            tongSoChan += arr[i];
+        } else {
+            tongSoLe += arr[i];
+        }
+    }
+    document.write("Tong so chan la: "+tongSoChan+"<br>");
+    document.write("Tong so le la: "+ tongSoLe);
+
+
+</script>
+</body>
+</html>

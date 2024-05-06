@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Manufacturer</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody id="infor">
+    </tbody>
+</table>
+
+<script>
+    class Phone{
+        constructor(code,name,manufacturer,price) {
+            this.code = code;
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.price = price;
+        }
+        getCode(){
+            return this.code ;
+        }
+        setCode(code){
+            this.code = code;
+        }
+        getName(){
+            return this.code ;
+        }
+        setName(name){
+            this.code = name;
+        }
+        getManufacturer(){
+            return this.manufacturer ;
+        }
+        setManufacturer(manufacturer){
+            this.code = manufacturer;
+        }
+        getPrice(){
+            return this.price ;
+        }
+        setPrice(price){
+            this.code = price;
+        }
+
+        toString(){
+            this.getCode(),this.getName(),this.getManufacturer(),this.getPrice();
+        }
+    }
+
+    let phones = [
+
+        new Phone(2,"samsung ss22","sumsung",800),
+        new Phone(1,"iphone","apple",1000),
+        new Phone(3,"oppo find x","oppo",600),
+        new Phone(4,"xiaomi mi 13","xiaomi",500)
+        ]
+
+        function initMobileList() {
+            const listPhone = document.getElementById("infor");
+            let list = "";
+            for (const mobile of phones) {
+                list += "<tr>" +
+                    "<td>" + mobile.name + "</td>" +
+                    "<td>" + mobile.code + "</td>" +
+                    "<td>" + mobile.manufacturer + "</td>" +
+                    "<td>" + mobile.price + "</td>" +
+                    "</tr>";
+            }
+
+            listPhone.innerHTML = list;
+        }
+
+    initMobileList();
+
+
+</script>
+</body>
+</html>

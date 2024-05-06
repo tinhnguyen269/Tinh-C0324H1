@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    function countUpper (checkUpper){
+        for(let i =0 ; i<checkUpper.length ;i++){
+            if (checkUpper[i] === checkUpper[i].toUpperCase()){
+                count++;
+            }
+        }
+        if(count===0){
+            alert("The strings is not contain upper char")
+        }
+    }
+    countUpper("abcdEF");
+    document.write("Mang co so ki tu viet hoa la: "+count);
+</script>
+</body>
+</html>
